@@ -1,27 +1,40 @@
 {
-  "name": "js-hash-code",
-  "version": "1.0.0",
-  "description": "generate a javascript object hash coe.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/HoKangInfo/js-hash-code.git"
-  },
-  "keywords": [
-    "hash",
-    "object",
-    "javascript"
-  ],
-  "author": "Robin JH Kang",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/HoKangInfo/js-hash-code/issues"
-  },
-  "homepage": "https://github.com/HoKangInfo/js-hash-code#readme",
-  "dependencies": {
-    "crc": "^3.4.4"
-  }
+    "name": "@pat/js-hash-code",
+    "version": "1.0.3",
+    "description": "generate a javascript object hash coe.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "rimraf dist && tsc && cpy package.json package-lock.json .npmrc dist"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/HoKangInfo/js-hash-code.git"
+    },
+    "keywords": [
+        "hash",
+        "object",
+        "javascript"
+    ],
+    "author": "Robin JH Kang",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/HoKangInfo/js-hash-code/issues"
+    },
+    "homepage": "https://github.com/HoKangInfo/js-hash-code#readme",
+    "dependencies": {
+        "crc": "^3.8.0"
+    },
+    "publishConfig": {
+        "registry": "https://nexus.picsart.tools/content/repositories/npm_hosted/"
+    },
+    "devDependencies": {
+        "@types/crc": "^3.4.0",
+        "@types/node": "^13.9.1",
+        "cpy": "^8.1.0",
+        "cpy-cli": "^3.1.0",
+        "rimraf": "^3.0.2",
+        "ts-node": "^8.6.2",
+        "typescript": "^3.8.3"
+    }
 }
